@@ -13,7 +13,7 @@ const Login = () => {
 
         
         const storedEmail = localStorage.getItem('email');
-        const storedPassword = localStorage.getItem('pssword');
+        const storedPassword = localStorage.getItem('password');
         if (email === storedEmail && password === storedPassword) {
             toast.success("Login successfully")
             navigate('/dashboard');
