@@ -5,28 +5,24 @@ import { toast } from 'react-toastify';
 
 const SignUp = () => {
     const navigate = useNavigate();
-        const [name, setName] = useState('');
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        
-        if (name && email && password) {
-            if (password === password) {
-                localStorage.setItem('name', name);
-                localStorage.setItem('email', email);
-                localStorage.setItem('pssword', password);
 
-                toast.success("Sign up successfully")
-                navigate('/login');
-            } else {
-                alert("Passwords do not match"); 
-            }
+        if (name && email && password) {
+            localStorage.setItem('name', name);
+            localStorage.setItem('email', email);
+            localStorage.setItem('password', password); 
+
+            toast.success("Sign up successfully");
+            navigate('/login');
         } else {
-            alert("Please fill in all fields"); 
+            alert("Please fill in all fields");
         }
     };
+
 
     return (
         <>
