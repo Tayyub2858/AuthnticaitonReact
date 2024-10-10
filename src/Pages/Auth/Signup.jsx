@@ -5,9 +5,7 @@ import { toast } from 'react-toastify';
 
 const SignUp = () => {
     const navigate = useNavigate();
-    
-    // State to hold form input values
-    const [name, setName] = useState('');
+        const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
